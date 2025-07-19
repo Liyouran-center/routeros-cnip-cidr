@@ -8,10 +8,10 @@ CN ip list script generator for MikroTik RouterOS
 
 ```Ros Shell
 # CDN, fast
-/tool fetch url="https://cdn.jsdelivr.net/gh/RookieZoe/routeros-cnip-cidr/dist/cn_ip_cidr.rsc" dst-path=cn.rsc;
+/tool fetch url="https://cdn.jsdelivr.net/gh/2681485724/routeros-cnip-cidr/dist/cn_ip_cidr.rsc" dst-path=cn.rsc;
 
 # if CDN does't work, use this
-/tool fetch url="https://raw.githubusercontent.com/RookieZoe/routeros-cnip-cidr/master/dist/cn_ip_cidr.rsc" dst-path=cn.rsc;
+/tool fetch url="https://raw.githubusercontent.com/2681485724/routeros-cnip-cidr/master/dist/cn_ip_cidr.rsc" dst-path=cn.rsc;
 
 /import file-name=cn.rsc;
 ```
