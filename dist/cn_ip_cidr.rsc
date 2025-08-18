@@ -5687,3 +5687,8 @@
 :do {add address=2c0f:f7a8:9210::/47 list=cn_ip_cidr timeout=604800 } on-error={}
 :do {add address=2c0f:f7a8:9220::/48 list=cn_ip_cidr timeout=604800 } on-error={}
 }
+:if ([:len [/system package find where name="ipv6" and disabled=no]] > 0) do={
+/log info "Import cn ipv6 cidr list..."
+/ipv6 firewall address-list remove [/ipv6 firewall address-list find list=cn_ip_cidr]
+/ipv6 firewall address-list
+}
