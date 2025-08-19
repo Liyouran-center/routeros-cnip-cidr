@@ -5557,8 +5557,7 @@
 :do {add address=2a0f:7803:fa24::/46 list=cn_ip_cidr timeout=604800 } on-error={}
 :do {add address=2a0f:7803:faf3::/48 list=cn_ip_cidr timeout=604800 } on-error={}
 :do {add address=2a0f:7803:fe41::/48 list=cn_ip_cidr timeout=604800 } on-error={}
-:do {add address=2a0f:7803:fe45::/48 list=cn_ip_cidr timeout=604800 } on-error={}
-:do {add address=2a0f:7803:fe46::/47 list=cn_ip_cidr timeout=604800 } on-error={}
+:do {add address=2a0f:7803:fe44::/46 list=cn_ip_cidr timeout=604800 } on-error={}
 :do {add address=2a0f:7803:fe4e::/48 list=cn_ip_cidr timeout=604800 } on-error={}
 :do {add address=2a0f:7803:fe81::/48 list=cn_ip_cidr timeout=604800 } on-error={}
 :do {add address=2a0f:7803:fe82::/48 list=cn_ip_cidr timeout=604800 } on-error={}
@@ -5585,6 +5584,7 @@
 :do {add address=2a13:1800:80::/44 list=cn_ip_cidr timeout=604800 } on-error={}
 :do {add address=2a13:1800:300::/44 list=cn_ip_cidr timeout=604800 } on-error={}
 :do {add address=2a13:1801:180::/43 list=cn_ip_cidr timeout=604800 } on-error={}
+:do {add address=2a13:a5c3:ff10::/44 list=cn_ip_cidr timeout=604800 } on-error={}
 :do {add address=2a13:a5c3:ff21::/48 list=cn_ip_cidr timeout=604800 } on-error={}
 :do {add address=2a13:a5c3:ff50::/44 list=cn_ip_cidr timeout=604800 } on-error={}
 :do {add address=2a13:a5c7:1800::/40 list=cn_ip_cidr timeout=604800 } on-error={}
@@ -5598,7 +5598,6 @@
 :do {add address=2a13:a5c7:31a0::/43 list=cn_ip_cidr timeout=604800 } on-error={}
 :do {add address=2a13:a5c7:3307::/48 list=cn_ip_cidr timeout=604800 } on-error={}
 :do {add address=2a13:aac4:f000::/44 list=cn_ip_cidr timeout=604800 } on-error={}
-:do {add address=2a13:b487:5000::/40 list=cn_ip_cidr timeout=604800 } on-error={}
 :do {add address=2a14:7c0:4a01::/48 list=cn_ip_cidr timeout=604800 } on-error={}
 :do {add address=2a14:4c41::/32 list=cn_ip_cidr timeout=604800 } on-error={}
 :do {add address=2a14:67c1:20::/44 list=cn_ip_cidr timeout=604800 } on-error={}
@@ -5632,7 +5631,7 @@
 :do {add address=2a14:67c1:b105::/48 list=cn_ip_cidr timeout=604800 } on-error={}
 :do {add address=2a14:67c1:b107::/48 list=cn_ip_cidr timeout=604800 } on-error={}
 :do {add address=2a14:67c1:b130::/46 list=cn_ip_cidr timeout=604800 } on-error={}
-:do {add address=2a14:67c1:b134::/48 list=cn_ip_cidr timeout=604800 } on-error={}
+:do {add address=2a14:67c1:b134::/47 list=cn_ip_cidr timeout=604800 } on-error={}
 :do {add address=2a14:67c1:b4c0::/45 list=cn_ip_cidr timeout=604800 } on-error={}
 :do {add address=2a14:67c1:b4e0::/43 list=cn_ip_cidr timeout=604800 } on-error={}
 :do {add address=2a14:67c1:b500::/48 list=cn_ip_cidr timeout=604800 } on-error={}
@@ -5686,9 +5685,4 @@
 :do {add address=2c0f:f7a8:9041::/48 list=cn_ip_cidr timeout=604800 } on-error={}
 :do {add address=2c0f:f7a8:9210::/47 list=cn_ip_cidr timeout=604800 } on-error={}
 :do {add address=2c0f:f7a8:9220::/48 list=cn_ip_cidr timeout=604800 } on-error={}
-}
-:if ([:len [/system package find where name="ipv6" and disabled=no]] > 0) do={
-/log info "Import cn ipv6 cidr list..."
-/ipv6 firewall address-list remove [/ipv6 firewall address-list find list=cn_ip_cidr]
-/ipv6 firewall address-list
 }
