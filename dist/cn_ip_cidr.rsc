@@ -5519,7 +5519,8 @@
 :do {add address=2a06:3603::/32 list=cn_ip_cidr } on-error={}
 :do {add address=2a06:3604::/30 list=cn_ip_cidr } on-error={}
 :do {add address=2a06:9f81:4600::/43 list=cn_ip_cidr } on-error={}
-:do {add address=2a06:9f81:4640::/44 list=cn_ip_cidr } on-error={}
+:do {add address=2a06:9f81:4620::/44 list=cn_ip_cidr } on-error={}
+:do {add address=2a06:9f81:4640::/43 list=cn_ip_cidr } on-error={}
 :do {add address=2a06:a005:260::/43 list=cn_ip_cidr } on-error={}
 :do {add address=2a06:a005:280::/43 list=cn_ip_cidr } on-error={}
 :do {add address=2a06:a005:2a0::/44 list=cn_ip_cidr } on-error={}
